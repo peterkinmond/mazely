@@ -41,7 +41,7 @@ Maze.STEP_SPEED = 150;
  */
 Maze.ROWS = Maze.MAP.length;
 Maze.COLS = Maze.MAP[0].length;
-Maze.SQUARE_SIZE = 50;
+Maze.SQUARE_SIZE = 55;
 Maze.PEGMAN_HEIGHT = 52;
 Maze.PEGMAN_WIDTH = 49;
 

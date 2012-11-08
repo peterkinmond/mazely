@@ -9,29 +9,27 @@
 <body>
   <table width="100%" height="100%">
     <tr>
-      <td width="410" valign="top">
-        <h1><a href="http://code.google.com/p/blockly/">Blockly</a> &gt; <a href="../index.html">Demos</a> &gt; Maze</h1>
-
+      <td width="450" valign="top">
+        <div id="titleDiv">
+          <h1>Maze 1: Go, Go, Go!</h1>
+        </div>
+        
         <div>
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgMaze" width="400px" height="400px">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgMaze" width="440px" height="440px">
         </div>
 
         <div id="buttonDiv">
           <button id="runButton" class="launch" onclick="Maze.runButtonClick();">Run Program</button>
           <button id="resetButton" class="launch" onclick="Maze.resetButtonClick();" style="display: none">&nbsp; Reset &nbsp;</button>
         </div>
-
-        <div id="randomizeDiv">
-          <button onclick="Maze.randomize();">Randomize Maze</button>
+        <div id="navigationDiv">
+          <button id="prevButton" onclick="location.href='maze1.html'">Prev Maze</button>
+          <button id="nextButton" onclick="location.href='maze2.html'">Next Maze</button>
         </div>
+        <div id="randomizeDiv"></div>
       </td>
       <td valign="top" rowspan=2>
         <iframe src="frame.html"></iframe>
-      </td>
-    </tr>
-    <tr>
-      <td align="right" valign="bottom">
-        <small>[<a href="javascript:void(Maze.showCode())">See generated JavaScript code.</a>]</small>
       </td>
     </tr>
   </table>

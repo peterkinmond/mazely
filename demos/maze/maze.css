@@ -30,7 +30,7 @@ button:active {
 button:hover {
   box-shadow: 2px 2px 5px #888;
 }
-#buttonDiv, #randomizeDiv {
+#buttonDiv, #randomizeDiv, #navigationDiv {
   text-align: center;
   padding-top: 2em;
 }
@@ -38,4 +38,7 @@ iframe {
   height: 100%;
   width: 100%;
   border: 1px solid #ccc;
+}
+#titleDiv {
+  color: blue;
 }
