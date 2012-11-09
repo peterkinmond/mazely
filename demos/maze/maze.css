@@ -30,9 +30,18 @@ button:active {
 button:hover {
   box-shadow: 2px 2px 5px #888;
 }
+
+#resetButton {
+  display: none;
+}
+
+/* Page sections */
 #buttonDiv, #randomizeDiv, #navigationDiv {
   text-align: center;
   padding-top: 2em;
+}
+#titleDiv {
+  color: blue;
 }
 #titleDiv, #descriptionDiv {
   padding-bottom: 2em;
@@ -42,6 +51,11 @@ iframe {
   width: 100%;
   border: 1px solid #ccc;
 }
-#titleDiv {
-  color: blue;
+
+/* Show/hide */
+button.show {
+  display: inline-block;
+}
+button.hide {
+  display: none;
 }

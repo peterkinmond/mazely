@@ -540,6 +540,14 @@ Maze.scheduleFinish = function() {
   Maze.pidList.push(window.setTimeout(function() {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, direction16);
     }, Maze.STEP_SPEED * 3));
+  Maze.updateForSuccess();
+};
+
+/**
+ * Update page after maze correctly finished.
+ */
+Maze.updateForSuccess = function() {
+  document.getElementById('nextButton').setAttribute('class', 'show');
 };
 
 /**
