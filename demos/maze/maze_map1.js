@@ -1,5 +1,8 @@
 var Maze = Maze || {};
 
+
+// ********************* MAZE 1 *********************
+
 /**
  * The maze's map is a 2D array of numbers.
  * 0: Wall.
@@ -16,3 +19,14 @@ Maze.MAP = [
   [0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0]];
+
+Maze.TITLE = 'Maze 1: Go, Go, Go!';
+
+Maze.DESCRIPTION = 'The fastest way from point A to point B is a straight line.';
+
+Maze.previous = null;
+
+Maze.next = 2;
+
+
+

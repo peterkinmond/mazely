@@ -253,6 +253,7 @@ Maze.draw_map = function() {
 Maze.init = function(blockly) {
   window.Blockly = blockly;
   Maze.draw_map();
+  Maze.loadMazeProperties();
 
   window.onbeforeunload = function() {
     if (Blockly.mainWorkspace.getAllBlocks().length > 1) {
@@ -317,6 +318,18 @@ Maze.reset = function() {
 };
 
 /**
+ * Set up screen with maze's properties (title, desc, nav buttons)
+ */
+Maze.loadMazeProperties = function() {
+  // Load title and description
+  document.getElementById('titleDiv').getElementsByTagName('h1')[0].innerHTML = Maze.TITLE;
+  document.getElementById('descriptionDiv').innerHTML = Maze.DESCRIPTION;
+
+  // Load nav buttons
+
+};
+
+/**
  * Click the run button.  Start the program.
  */
 Maze.runButtonClick = function() {
@@ -331,7 +344,7 @@ Maze.runButtonClick = function() {
  * Click the reset button.  Reset the maze.
  */
 Maze.resetButtonClick = function() {
-  document.getElementById('runButton').style.display = 'inline';
+    document.getElementById('runButton').style.display = 'inline';
   document.getElementById('resetButton').style.display = 'none';
   document.getElementById('randomizeDiv').style.visibility = 'visible';
   Blockly.mainWorkspace.traceOn(false);
