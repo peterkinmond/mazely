@@ -318,15 +318,12 @@ Maze.reset = function() {
 };
 
 /**
- * Set up screen with maze's properties (title, desc, nav buttons)
+ * Set up screen with maze's properties (title, desc)
  */
 Maze.loadMazeProperties = function() {
   // Load title and description
   document.getElementById('titleDiv').getElementsByTagName('h1')[0].innerHTML = Maze.TITLE;
   document.getElementById('descriptionDiv').innerHTML = Maze.DESCRIPTION;
-
-  // Load nav buttons
-
 };
 
 /**
