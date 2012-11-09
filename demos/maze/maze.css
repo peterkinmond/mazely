@@ -34,6 +34,9 @@ button:hover {
   text-align: center;
   padding-top: 2em;
 }
+#titleDiv, #descriptionDiv {
+  padding-bottom: 2em;
+}
 iframe {
   height: 100%;
   width: 100%;
