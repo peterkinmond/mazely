@@ -47,11 +47,11 @@ Mazes = [
     MAP: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 1, 1, 1, 3, 0],
       [0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 1, 0, 0, 0, 0],
       [0, 2, 1, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]],
     TITLE: 'Maze 3: Zig Zag',
     DESCRIPTION: 'To the window, to the wall..'
@@ -91,31 +91,29 @@ Mazes = [
   },
 ];
 
-var mazeNumber = parseInt(getCookie('BlocklyMazeNumber')) || 1;
+var mazeNumber = parseInt(getLocalStorage('mazelyMazeNumber')) || 1;
 Maze = Mazes[mazeNumber - 1];
 
 Maze.next = function() {
-  setCookie('BlocklyMazeNumber', mazeNumber + 1);
+  setLocalStorage('mazelyMazeNumber', mazeNumber + 1);
   location.href='index.html';
 };
 
-function setCookie(key, value) {
-  var today = new Date();
-  var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
-  document.cookie = key + "=" + value + "; path=/; expires=" + expiry.toGMTString();
+
+/**
+ * Save value to localStorage.
+ */
+function setLocalStorage(key, value) {
+  if ('localStorage' in window) {
+    window.localStorage.setItem(key, value);
+  }
 }
 
-function getCookie(c_name)
-{
-  var i,x,y,ARRcookies=document.cookie.split(";");
-  for (i=0;i<ARRcookies.length;i++)
-  {
-    x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-    y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-    x=x.replace(/^\s+|\s+$/g,"");
-    if (x==c_name)
-    {
-    return unescape(y);
-    }
+/**
+ * Get value from localStorage.
+ */
+function getLocalStorage(key) {
+  if ('localStorage' in window && window.localStorage.getItem(key)) {
+    return window.localStorage.getItem(key);
   }
 }

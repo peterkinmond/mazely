@@ -266,7 +266,7 @@ Maze.init = function(blockly) {
   // Load the editor with a starting block.
   var xml = Blockly.Xml.textToDom(
       '<xml>' +
-      '  <block type="maze_move" x="85" y="100"></block>' +
+      '  <block type="maze_move" x="185" y="100"></block>' +
       '</xml>');
   Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
 
