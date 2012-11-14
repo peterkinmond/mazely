@@ -78,8 +78,8 @@ Mazes = [
     ID: 5,
     MAP: [
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 1, 1, 0, 1, 0, 3, 0],
-      [0, 1, 1, 0, 1, 1, 1, 0],
+      [0, 1, 1, 0, 1, 1, 3, 0],
+      [0, 1, 1, 0, 1, 1, 0, 0],
       [0, 1, 0, 0, 1, 0, 0, 0],
       [0, 1, 1, 1, 1, 1, 1, 0],
       [0, 0, 1, 0, 0, 0, 1, 0],
@@ -96,7 +96,7 @@ Maze = Mazes[mazeNumber - 1];
 
 Maze.next = function() {
   setCookie('BlocklyMazeNumber', mazeNumber + 1);
-  location.href='maze.html';
+  location.href='index.html';
 };
 
 function setCookie(key, value) {
