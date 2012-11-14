@@ -1,16 +1,16 @@
 /**
- * Save value to localStorage.
+ * Save value to client.
  */
-function setLocalStorage(key, value) {
+function saveValue(key, value) {
   if ('localStorage' in window) {
     window.localStorage.setItem(key, value);
   }
 }
 
 /**
- * Get value from localStorage.
+ * Load value from client.
  */
-function getLocalStorage(key) {
+function loadValue(key) {
   if ('localStorage' in window && window.localStorage.getItem(key)) {
     return window.localStorage.getItem(key);
   }

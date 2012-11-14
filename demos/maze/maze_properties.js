@@ -91,10 +91,10 @@ Mazes = [
   },
 ];
 
-var mazeNumber = parseInt(getLocalStorage('mazelyMazeNumber')) || 1;
+var mazeNumber = parseInt(loadValue('mazelyMazeNumber')) || 1;
 Maze = Mazes[mazeNumber - 1];
 
 Maze.next = function() {
-  setLocalStorage('mazelyMazeNumber', mazeNumber + 1);
+  saveValue('mazelyMazeNumber', mazeNumber + 1);
   location.href='index.html';
 };
