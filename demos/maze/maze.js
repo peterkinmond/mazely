@@ -257,7 +257,8 @@ Maze.init = function(blockly) {
 
   window.onbeforeunload = function() {
     if (Blockly.mainWorkspace.getAllBlocks().length > 1) {
-      return 'Leaving this page will result in the loss of your work.';
+      // TODO: Do any cleanup stuff such as saving user's progress
+      return null;
     }
     return null;
   };
