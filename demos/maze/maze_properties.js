@@ -14,6 +14,8 @@ var Maze = Maze || {};
 Mazes = [
   Maze = {
     ID: 1,
+    TITLE: 'Maze 1: Go, Go, Go!',
+    DESCRIPTION: 'The fastest way from point A to point B is a straight line.',
     MAP: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -22,13 +24,13 @@ Mazes = [
       [0, 2, 1, 1, 1, 1, 3, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]],
-    TITLE: 'Maze 1: Go, Go, Go!',
-    DESCRIPTION: 'The fastest way from point A to point B is a straight line.'
+      [0, 0, 0, 0, 0, 0, 0, 0]]
   },
 
   Maze = {
     ID: 2,
+    TITLE: 'Maze 2: Hang a left',
+    DESCRIPTION: '',
     MAP: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -37,13 +39,13 @@ Mazes = [
       [0, 0, 0, 0, 1, 0, 0, 0],
       [0, 2, 1, 1, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]],
-    TITLE: 'Maze 2: Hang a left',
-    DESCRIPTION: ''
+      [0, 0, 0, 0, 0, 0, 0, 0]]
   },
 
   Maze = {
     ID: 3,
+    TITLE: 'Maze 3: Zig Zag',
+    DESCRIPTION: 'To the window, to the wall..',
     MAP: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -52,13 +54,15 @@ Mazes = [
       [0, 0, 0, 1, 0, 0, 0, 0],
       [0, 2, 1, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]],
-    TITLE: 'Maze 3: Zig Zag',
-    DESCRIPTION: 'To the window, to the wall..'
+      [0, 0, 0, 0, 0, 0, 0, 0]]
   },
 
   Maze = {
     ID: 4,
+    TITLE: 'Maze 4: The Road Less Traveled',
+    DESCRIPTION: 'Two roads diverged in a wood, and I— <br/>\
+      I took the one less traveled by,<br/> \
+      And that has made all the difference.',
     MAP: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 1, 1, 1, 3, 0],
@@ -67,15 +71,14 @@ Mazes = [
       [0, 2, 1, 1, 0, 0, 0, 0],
       [0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 1, 1, 1, 1, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]],
-    TITLE: 'Maze 4: The Road Less Traveled',
-    DESCRIPTION: 'Two roads diverged in a wood, and I— <br/>\
-      I took the one less traveled by,<br/> \
-      And that has made all the difference.'
+      [0, 0, 0, 0, 0, 0, 0, 0]]
   },
 
   Maze = {
     ID: 5,
+    TITLE: 'Maze 5: The Unpossible Dream',
+    DESCRIPTION: 'This is my quest, to follow that star<br/> \
+      No matter how hopeless, no matter how far',
     MAP: [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 1, 1, 0, 1, 1, 3, 0],
@@ -84,10 +87,7 @@ Mazes = [
       [0, 1, 1, 1, 1, 1, 1, 0],
       [0, 0, 1, 0, 0, 0, 1, 0],
       [0, 2, 1, 1, 1, 0, 1, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]],
-    TITLE: 'Maze 5: The Unpossible Dream',
-    DESCRIPTION: 'This is my quest, to follow that star<br/> \
-      No matter how hopeless, no matter how far'
+      [0, 0, 0, 0, 0, 0, 0, 0]]
   },
 ];
 
