@@ -34,7 +34,7 @@ Blockly.Flyout = function() {
 /**
  * Does the flyout automatically close when a block is created?
  */
-Blockly.Flyout.prototype.autoClose = true;
+Blockly.Flyout.prototype.autoClose = false;
 
 /**
  * Corner radius of the flyout background.

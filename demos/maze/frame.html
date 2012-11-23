@@ -34,15 +34,17 @@
       for (var x = 0; x < keepers.length; x++) {
         newLanguage[keepers[x]] = Blockly.Language[keepers[x]];
       }
-      // Fold control category into logic category.
+      // Combine all blocks into single category for simplicity
       for (var name in newLanguage) {
-        if (newLanguage[name].category == 'Control') {
-          newLanguage[name].category = 'Logic';
-        }
+        newLanguage[name].category = 'Blocks';
       }
       Blockly.Language = newLanguage;
 
       Blockly.inject(document.body, {path: '../../'});
+      
+      // TODO: Consider moving this to toolbox.js
+      // Show flyout as initially open
+      Blockly.Toolbox.selectOption_(Blockly.Toolbox.svgOptions_.firstChild)
 
       if (window.parent.Maze) {
         // Let the top-level application know that Blockly is ready.
