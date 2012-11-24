@@ -1,41 +1,51 @@
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Blockly Demo: Maze</title>
-  <script type="text/javascript" src="storage_helper.js"></script>
-  <script type="text/javascript" src="maze_properties.js"></script>
-  <script type="text/javascript" src="maze.js"></script>
-  <link type="text/css" rel="stylesheet" href="maze.css"></link>
-</head>
-<body>
-  <table width="100%" height="100%">
-    <tr>
-      <td width="450" valign="top">
-        <div id="titleDiv">
-          <h1>
-            <!-- maze title goes here -->
-          </h1>
-        </div>
-        <div id="descriptionDiv">
-          <!-- maze description goes here -->
-        </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgMaze" width="440px" height="440px">
-        </div>
-        <div id="buttonDiv">
-          <button id="runButton" class="launch" onclick="Maze.runButtonClick();">Run Program</button>
-          <button id="resetButton" class="launch" onclick="Maze.resetButtonClick();">&nbsp; Reset &nbsp;</button>
-        </div>
-        <div id="navigationDiv">
-          <button id="prevButton" class="hide" onclick="Maze.previous();">Prev Maze</button>
-          <button id="nextButton" class="hide" onclick="Maze.next();">Next Maze</button>
-        </div>
-        <div id="randomizeDiv"></div>
-      </td>
-      <td valign="top" rowspan=2>
-        <iframe src="frame.html"></iframe>
-      </td>
-    </tr>
-  </table>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Blockly Demo: Maze</title>
+    <script type="text/javascript" src="storage_helper.js"></script>
+    <script type="text/javascript" src="maze_properties.js"></script>
+    <script type="text/javascript" src="maze.js"></script>
+    <link type="text/css" rel="stylesheet" href="maze.css"></link>
+  </head>
+  <body>
+    <div id="outerWrapper">
+      <div id="innerWrapper">
+        <table id="mainTable">
+          <tr>
+            <td colspan="3">
+            <div id="titleDiv">
+              <h1>
+                <!-- maze title goes here -->
+              </h1>
+            </div>
+            <div id="descriptionDiv">
+              <!-- maze description goes here -->
+            </div>
+          </td>
+          </tr>
+          <tr height="100%">
+            <td width="700" valign="top">
+              <iframe src="frame.html"></iframe>
+            </td>
+            <td width="20">
+            </td>
+            <td width="450" valign="top">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgMaze" width="440px" height="440px">
+              </div>
+              <div id="buttonDiv">
+                <button id="runButton" class="launch" onclick="Maze.runButtonClick();">Run Program</button>
+                <button id="resetButton" class="launch" onclick="Maze.resetButtonClick();">&nbsp; Reset &nbsp;</button>
+              </div>
+              <div id="navigationDiv">
+                <button id="prevButton" class="hide" onclick="Maze.previous();">Prev Maze</button>
+                <button id="nextButton" class="hide" onclick="Maze.next();">Next Maze</button>
+              </div>
+              <div id="randomizeDiv"></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
 </html>
