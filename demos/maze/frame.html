@@ -36,7 +36,9 @@
       }
       // Combine all blocks into single category for simplicity
       for (var name in newLanguage) {
-        newLanguage[name].category = 'Blocks';
+        if (newLanguage[name].category) {
+          newLanguage[name].category = 'Blocks';
+        }
       }
       Blockly.Language = newLanguage;
 
