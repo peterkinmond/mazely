@@ -25,21 +25,9 @@
   </style>
   <script>
     function init() {
-      // Whitelist of blocks to keep.
-      var newLanguage = {};
-      var keepers = ['maze_move', 'maze_turnLeft', 'maze_turnRight',
-          'maze_isWall', 'controls_if', 'controls_forever', 'controls_whileUntil',
-          'logic_operation', 'logic_negate'];
-      for (var x = 0; x < keepers.length; x++) {
-        newLanguage[keepers[x]] = Blockly.Language[keepers[x]];
+      if (window.parent.Maze) {
+        limitAvailableBlocks();
       }
-      // Combine all blocks into single category for simplicity
-      for (var name in newLanguage) {
-        if (newLanguage[name].category) {
-          newLanguage[name].category = 'Blocks';
-        }
-      }
-      Blockly.Language = newLanguage;
 
       Blockly.inject(document.body, {path: '../../'});
       
@@ -62,6 +50,24 @@
         }
         alert(msg);
       }
+    }
+
+    function limitAvailableBlocks() {
+       // Whitelist of blocks to keep.
+      var newLanguage = {};
+
+      var keepers = window.parent.Maze.AVAILABLE_BLOCKS;
+
+      for (var x = 0; x < keepers.length; x++) {
+        newLanguage[keepers[x]] = Blockly.Language[keepers[x]];
+      }
+      // Combine all blocks into single category for simplicity
+      for (var name in newLanguage) {
+        if (newLanguage[name].category) {
+          newLanguage[name].category = 'Blocks';
+        }
+      }
+      Blockly.Language = newLanguage;
     }
   </script>
 </head>

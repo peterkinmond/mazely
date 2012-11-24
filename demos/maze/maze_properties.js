@@ -1,6 +1,8 @@
 var Maze = Maze || {};
 
 /**
+ * Notes for Maze.MAP
+ *
  * The maze's map is a 2D array of numbers.
  * 0: Wall.
  * 1: Open road.
@@ -9,6 +11,16 @@ var Maze = Maze || {};
  *
  * Example of straight-line map with start on left and finish on right:
  *  Maze.MAP = [[0, 2, 1, 1, 1, 1, 3, 0]];
+ */
+
+/**
+ * Notes for Maze.AVAILABLE_BLOCKS
+ *
+ * Full list of maze blocks:
+ * ['maze_move', 'maze_turnLeft', 'maze_turnRight',
+ * 'maze_isWall', 'controls_if', 'controls_forever', 'controls_whileUntil',
+ * 'logic_operation', 'logic_negate']
+ *
  */
 
 Mazes = [
@@ -24,7 +36,8 @@ Mazes = [
       [0, 2, 1, 1, 1, 1, 3, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]]
+      [0, 0, 0, 0, 0, 0, 0, 0]],
+    AVAILABLE_BLOCKS: ['maze_move']
   },
 
   Maze = {
@@ -39,7 +52,8 @@ Mazes = [
       [0, 0, 0, 0, 1, 0, 0, 0],
       [0, 2, 1, 1, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]]
+      [0, 0, 0, 0, 0, 0, 0, 0]],
+    AVAILABLE_BLOCKS: ['maze_move', 'maze_turnLeft', 'maze_turnRight']
   },
 
   Maze = {
@@ -54,7 +68,8 @@ Mazes = [
       [0, 0, 0, 1, 0, 0, 0, 0],
       [0, 2, 1, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]]
+      [0, 0, 0, 0, 0, 0, 0, 0]],
+    AVAILABLE_BLOCKS: ['maze_move', 'maze_turnLeft', 'maze_turnRight']
   },
 
   Maze = {
@@ -71,7 +86,8 @@ Mazes = [
       [0, 2, 1, 1, 0, 0, 0, 0],
       [0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 1, 1, 1, 1, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]]
+      [0, 0, 0, 0, 0, 0, 0, 0]],
+    AVAILABLE_BLOCKS: ['maze_move', 'maze_turnLeft', 'maze_turnRight']
   },
 
   Maze = {
@@ -87,7 +103,8 @@ Mazes = [
       [0, 1, 1, 1, 1, 1, 1, 0],
       [0, 0, 1, 0, 0, 0, 1, 0],
       [0, 2, 1, 1, 1, 0, 1, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]]
+      [0, 0, 0, 0, 0, 0, 0, 0]],
+    AVAILABLE_BLOCKS: ['maze_move', 'maze_turnLeft', 'maze_turnRight']
   },
 ];
 
