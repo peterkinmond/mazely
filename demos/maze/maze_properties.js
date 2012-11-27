@@ -108,10 +108,27 @@ Mazes = [
   },
 ];
 
-var mazeNumber = parseInt(loadValue('mazelyMazeNumber')) || 1;
-Maze = Mazes[mazeNumber - 1];
+/**
+ * Get number of current maze
+ */
+function getMazeNumber() {
+  var mazeNumber = parseInt(loadValue('mazelyMazeNumber'));
+  if (mazeNumber) {
+    return mazeNumber;
+  } else {
+    saveValue('mazelyMazeNumber', 1);
+    return 1;
+  }
+}
 
+var mazeIndex = getMazeNumber() - 1;
+Maze = Mazes[mazeIndex];
+
+/**
+ * Load the next maze
+ */
 Maze.next = function() {
-  saveValue('mazelyMazeNumber', mazeNumber + 1);
+  saveValue('mazelyMazeNumber', getMazeNumber() + 1);
   location.href='index.html';
 };
+
