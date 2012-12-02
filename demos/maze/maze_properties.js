@@ -56,8 +56,7 @@ Mazes = [
       [0, 0, 0, 0, 1, 0, 0, 0],
       [0, 2, 1, 1, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]],
-    AVAILABLE_BLOCKS: ['maze_move', 'maze_turnLeft', 'maze_turnRight']
+      [0, 0, 0, 0, 0, 0, 0, 0]]
   },
 
   Maze = {
@@ -129,6 +128,11 @@ var mazeIndex = getMazeNumber() - 1;
 Maze = Mazes[mazeIndex];
 
 // Set default values
+Maze.AVAILABLE_BLOCKS = Maze.AVAILABLE_BLOCKS ||
+   ['maze_move', 'maze_turnLeft', 'maze_turnRight',
+   'maze_isWall', 'controls_if', 'controls_forever', 'controls_whileUntil',
+   'logic_operation', 'logic_negate'];
+
 Maze.STARTING_BLOCKS = Maze.STARTING_BLOCKS ||
   '<xml>' +
   '  <block type="maze_move" x="285" y="100"></block>' +
