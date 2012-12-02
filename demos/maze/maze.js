@@ -263,11 +263,8 @@ Maze.init = function(blockly) {
     return null;
   };
 
-  // Load the editor with a starting block.
-  var xml = Blockly.Xml.textToDom(
-      '<xml>' +
-      '  <block type="maze_move" x="285" y="100"></block>' +
-      '</xml>');
+  // Load the editor with appropriate starting blocks.
+  var xml = Blockly.Xml.textToDom(Maze.STARTING_BLOCKS);
   Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
 
   // Record the map's offset.

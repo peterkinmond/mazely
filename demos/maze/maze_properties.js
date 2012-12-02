@@ -16,7 +16,7 @@ var Maze = Maze || {};
 /**
  * Notes for Maze.AVAILABLE_BLOCKS
  *
- * Full list of maze blocks:
+ * Full list of blocks used for maze:
  * ['maze_move', 'maze_turnLeft', 'maze_turnRight',
  * 'maze_isWall', 'controls_if', 'controls_forever', 'controls_whileUntil',
  * 'logic_operation', 'logic_negate']
@@ -37,7 +37,11 @@ Mazes = [
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]],
-    AVAILABLE_BLOCKS: ['maze_move']
+    AVAILABLE_BLOCKS: ['maze_move'],
+    STARTING_BLOCKS:
+      '<xml>' +
+      '  <block type="maze_move" x="285" y="100"></block>' +
+      '</xml>'
   },
 
   Maze = {
@@ -123,6 +127,12 @@ function getMazeNumber() {
 
 var mazeIndex = getMazeNumber() - 1;
 Maze = Mazes[mazeIndex];
+
+// Set default values
+Maze.STARTING_BLOCKS = Maze.STARTING_BLOCKS ||
+  '<xml>' +
+  '  <block type="maze_move" x="285" y="100"></block>' +
+  '</xml>';
 
 /**
  * Load the next maze
