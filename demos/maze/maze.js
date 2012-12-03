@@ -49,6 +49,10 @@ Maze.MAZE_WIDTH = Maze.SQUARE_SIZE * Maze.COLS;
 Maze.MAZE_HEIGHT = Maze.SQUARE_SIZE * Maze.ROWS;
 Maze.PATH_WIDTH = Maze.SQUARE_SIZE / 3;
 
+Maze.FILL_COLOUR = '#F1EEE7';
+Maze.STROKE_COLOUR = '#C8BEAE';
+Maze.STROKE_WIDTH = 9;
+
 /**
  * Constants for cardinal directions.
  */
@@ -171,11 +175,12 @@ Maze.draw_map = function() {
 
   // Draw the outer square.
   var square = document.createElementNS(Blockly.SVG_NS, 'rect');
+  square.setAttribute('id', 'mazeFill');
   square.setAttribute('width', Maze.MAZE_WIDTH);
   square.setAttribute('height', Maze.MAZE_HEIGHT);
-  square.setAttribute('fill', '#F1EEE7');
-  square.setAttribute('stroke-width', 1);
-  square.setAttribute('stroke', '#C8BEAE');
+  square.setAttribute('fill', Maze.FILL_COLOUR);
+  square.setAttribute('stroke-width', Maze.STROKE_WIDTH);
+  square.setAttribute('stroke', Maze.STROKE_COLOUR);
   svg.appendChild(square);
 
   // Draw the tiles making up the maze map.
@@ -548,6 +553,19 @@ Maze.scheduleFinish = function() {
   Maze.pidList.push(window.setTimeout(function() {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, direction16);
     }, Maze.STEP_SPEED * 3));
+
+  // Disco-fy the board
+  var board = document.getElementById('mazeFill');
+  for (var i = 0; i < 10; i++) {
+    var randomColour = '#' + Math.floor(Math.random() * 16777215).toString(16); // Thanks Paul Irish!
+    var colourToUse = (i < 9) ? randomColour : Maze.FILL_COLOUR;
+    window.setTimeout(function(colour) {
+      return function() {
+        board.setAttribute('fill', colour);
+      }
+    }(colourToUse, board), Maze.STEP_SPEED / 2 * i);
+  }
+
   Maze.updateForSuccess();
 };
 
