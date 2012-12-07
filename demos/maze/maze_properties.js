@@ -41,7 +41,8 @@ Mazes = [
     STARTING_BLOCKS:
       '<xml>' +
       '  <block type="maze_move" x="285" y="100"></block>' +
-      '</xml>'
+      '</xml>',
+    INTRO_VIDEO:'http://www.youtube.com/embed/OLwECShvRD0?rel=0&vq=hd720'
   },
 
   Maze = {
