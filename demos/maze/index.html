@@ -11,7 +11,9 @@
       $(function() {
         if (Maze.INTRO_VIDEO) {
           var lightbox = new Lightbox();
-          lightbox.show(Maze.INTRO_VIDEO);
+          var videoURL = 'http://www.youtube.com/embed/' + Maze.INTRO_VIDEO + 
+            '?autoplay=1&rel=0&vq=hd720';
+          lightbox.show(videoURL);
         }
       });
     </script>

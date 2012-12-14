@@ -42,7 +42,30 @@ Mazes = [
       '<xml>' +
       '  <block type="maze_move" x="285" y="100"></block>' +
       '</xml>',
-    INTRO_VIDEO:'http://www.youtube.com/embed/OLwECShvRD0?rel=0&vq=hd720'
+    INTRO_VIDEO:'OLwECShvRD0'
+  },
+
+  Maze = {
+    ID: 2,
+    TITLE: "Maze 2: There's Got to be an Easier Way",
+    DESCRIPTION: '"The three chief virtues of a programmer are: <br/>\
+      Laziness, Impatience and Hubris."<br/>\
+      Larry Wall',
+    MAP: [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 2, 1, 1, 1, 1, 3, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0]],
+    AVAILABLE_BLOCKS: ['maze_move', 'controls_forever'],
+    STARTING_BLOCKS:
+      '<xml>' +
+      '  <block type="controls_forever" x="285" y="100"></block>' +
+      '</xml>',
+    INTRO_VIDEO:'8i-nbCS37_g'
   },
 
   Maze = {
