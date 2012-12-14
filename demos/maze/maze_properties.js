@@ -140,7 +140,11 @@ Mazes = [
  */
 function getMazeNumber() {
   var mazeNumber = parseInt(loadValue('mazelyMazeNumber'));
-  if (mazeNumber) {
+  var manualOverride = getParameterByName('mazeNumber');
+  if (manualOverride) {
+    return manualOverride;
+  }
+  else if (mazeNumber) {
     return mazeNumber;
   } else {
     saveValue('mazelyMazeNumber', 1);
