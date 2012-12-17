@@ -165,7 +165,10 @@ Mazes = [
             </block> \
           </statement> \
         </block> \
-      </xml>'
+      </xml>',
+    NOTES: 'Intro "and" block. User learns that a single if-condition \
+      wont work in all cases. First example of needing to handle more than \
+      one condition.'
   },
 
   Maze = {
